@@ -4,6 +4,8 @@ A creative, interactive digital birthday tribute website celebrating **Mr. Pushk
 
 Built with modern web technologies, smooth micro-animations, particle effects, and an interactive celebration experience.
 
+🌐 **Live Demo:** [https://studymood.github.io/pushkal-sir-birthday/](https://studymood.github.io/pushkal-sir-birthday/)
+
 ---
 
 ## ✨ Features
