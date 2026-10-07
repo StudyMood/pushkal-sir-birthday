@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Pushkal Singh | Mentor & Management Leader @ Digicoders Pvt. Ltd.</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="A premium digital birthday tribute celebrating Mr. Pushkal Singh, esteemed mentor and management leader behind 40+ successful interns at Digicoders Pvt. Ltd., Lucknow.">
+  <meta name="keywords" content="Pushkal Singh, Birthday Tribute, Digicoders Pvt Ltd Lucknow, Mentor, Leadership, Interns">
+  <meta property="og:title" content="Happy Birthday Pushkal Singh | Premium Mentor Tribute">
+  <meta property="og:description" content="The Mentor Who Turned Interns Into Professionals at Digicoders Pvt. Ltd., Lucknow.">
+  <meta property="og:image" content="assets/images/pushkal_sir.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Three.js Interactive Particle Canvas Container -->
+  <div id="three-canvas-container"></div>
+
+  <!-- Floating Balloon Container -->
+  <div id="balloon-float-container" class="balloon-float-container"></div>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-ring">
+        <span class="loader-initials">PS</span>
+      </div>
+      <h3 class="loader-title">Pushkal Singh</h3>
+      <p class="loader-subtitle">Crafting Leaders • Shaping Futures • Digicoders</p>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Luxury Glassmorphism Navbar -->
+  <header>
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-badge">PS</div>
+        <div class="brand-info">
+          <span class="brand-name">Pushkal Singh</span>
+          <span class="brand-sub">Digicoders Pvt. Ltd., Lucknow</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#impact" class="nav-link">Impact</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#appreciation" class="nav-link">Wishes</a></li>
+        <li><a href="#achievements" class="nav-link">Leadership</a></li>
+        <li><a href="#gallery" class="nav-link">Memories</a></li>
+        <li><a href="#celebration" class="nav-link">Cake & Fun</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Audio BGM Player Toggle -->
+        <button id="audio-toggle-btn" class="audio-btn" title="Toggle Ambient Celebration Music" aria-label="Play Background Music">
+          <div class="audio-bars">
+            <div class="audio-bar"></div>
+            <div class="audio-bar"></div>
+            <div class="audio-bar"></div>
+          </div>
+        </button>
+
+        <!-- Quick 1-Click Light / Dark Toggle -->
+        <button id="theme-toggle-btn" class="theme-btn" title="Switch to Clean Light Mode" aria-label="Toggle Light / Dark Mode">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <!-- Multi-Theme Palette Selector Trigger -->
+        <button id="theme-palette-btn" class="theme-palette-btn" title="Select Theme Palette" aria-label="Select Theme Palette">
+          <i class="fas fa-palette"></i>
+          <span>Theme</span>
+        </button>
+
+        <a href="#celebration" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">
+          <i class="fas fa-birthday-cake"></i> Wish Sir
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Interactive Multi-Theme Selection Dropdown Tray -->
+  <div id="theme-picker-tray" class="theme-picker-tray" role="dialog" aria-label="Theme Selector">
+    <div class="theme-tray-header">
+      <div class="theme-tray-title">
+        <i class="fas fa-palette"></i> Choose Theme / रंग
+      </div>
+      <button id="close-theme-tray" class="theme-tray-close" aria-label="Close Theme Selector">&times;</button>
+    </div>
+    <p class="theme-tray-desc">Select a luxury theme or switch to Clean Light mode:</p>
+    <div class="theme-options-grid">
+      <!-- 1. Clean Pearl Light Mode -->
+      <button class="theme-option-card" data-theme-set="light">
+        <div class="theme-swatch">
+          <span style="background: #ffffff;"></span>
+          <span style="background: #d97706;"></span>
+          <span style="background: #2563eb;"></span>
+        </div>
+        <div class="theme-option-info">
+          <span class="theme-option-name">☀️ Clean Pearl (Light Mode)</span>
+          <span class="theme-option-tag">Ultra Clean, Real & Bright</span>
+        </div>
+        <i class="fas fa-check theme-check"></i>
+      </button>
+
+      <!-- 2. Midnight Gold Dark (Default) -->
+      <button class="theme-option-card" data-theme-set="dark-gold">
+        <div class="theme-swatch">
+          <span style="background: #04060e;"></span>
+          <span style="background: #f59e0b;"></span>
+          <span style="background: #3b82f6;"></span>
+        </div>
+        <div class="theme-option-info">
+          <span class="theme-option-name">🌙 Midnight Gold (Dark)</span>
+          <span class="theme-option-tag">Luxury Obsidian & Champagne</span>
+        </div>
+        <i class="fas fa-check theme-check"></i>
+      </button>
+
+      <!-- 3. Cyber Sapphire -->
+      <button class="theme-option-card" data-theme-set="dark-sapphire">
+        <div class="theme-swatch">
+          <span style="background: #030712;"></span>
+          <span style="background: #38bdf8;"></span>
+          <span style="background: #6366f1;"></span>
+        </div>
+        <div class="theme-option-info">
+          <span class="theme-option-name">💎 Cyber Sapphire</span>
+          <span class="theme-option-tag">Royal Tech Blue & Neon</span>
+        </div>
+        <i class="fas fa-check theme-check"></i>
+      </button>
+
+      <!-- 4. Royal Emerald -->
+      <button class="theme-option-card" data-theme-set="emerald-gold">
+        <div class="theme-swatch">
+          <span style="background: #01140e;"></span>
+          <span style="background: #10b981;"></span>
+          <span style="background: #f59e0b;"></span>
+        </div>
+        <div class="theme-option-info">
+          <span class="theme-option-name">👑 Royal Emerald</span>
+          <span class="theme-option-tag">Prestige Green & Gold</span>
+        </div>
+        <i class="fas fa-check theme-check"></i>
+      </button>
+
+      <!-- 5. Sunset Rose -->
+      <button class="theme-option-card" data-theme-set="sunset-rose">
+        <div class="theme-swatch">
+          <span style="background: #0f050e;"></span>
+          <span style="background: #f43f5e;"></span>
+          <span style="background: #fbbf24;"></span>
+        </div>
+        <div class="theme-option-info">
+          <span class="theme-option-name">🌸 Sunset Rose</span>
+          <span class="theme-option-tag">Warm Velvet & Rose Gold</span>
+        </div>
+        <i class="fas fa-check theme-check"></i>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Text Content -->
+          <div class="hero-text-content">
+            <div class="hero-badge-wrap">
+              <span class="section-tag">
+                <i class="fas fa-crown"></i> Exclusive Birthday Tribute
+              </span>
+              <span class="hero-live-badge">
+                <span class="pulse-dot"></span> 300+ Tech Placements • 40+ Interns Mentored
+              </span>
+            </div>
+
+            <h1 class="hero-title">
+              Happy Birthday,<br>
+              <span class="gold-gradient-text">Pushkal Singh</span> 🎂
+            </h1>
+
+            <div class="hero-subtitle-wrap">
+              <p class="hero-subtitle">
+                <span id="hero-typed-text"></span><span class="typing-cursor">|</span>
+              </p>
+            </div>
+
+            <p class="hero-description">
+              A visionary management leader and dedicated mentor at <strong>Digicoders Pvt. Ltd., Lucknow</strong>. Behind <strong>300+ successful student placements across all technologies</strong> and 40+ confident interns stands his unwavering guidance, patience, and leadership excellence.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn btn-wish-quick btn-glow open-thankyou-btn">
+                <i class="fas fa-heart"></i> Wish Karne Ke Liye Click Kare ✨
+              </button>
+              <a href="https://api.whatsapp.com/send?phone=919918863106&text=Happy%20Birthday%20Respected%20Pushkal%20Sir%21%20%F0%9F%8E%82%20Wishing%20you%20immense%20health%2C%20happiness%2C%20and%20great%20success.%20Thank%20you%20for%20being%20an%20incredible%20mentor%20at%20Digicoders%20Pvt.%20Ltd.%2C%20Lucknow%21" target="_blank" class="btn btn-whatsapp-direct">
+                <i class="fab fa-whatsapp"></i> Wish on WhatsApp
+              </a>
+              <a href="#journey" class="btn btn-glass">
+                <i class="fas fa-rocket"></i> Explore The Journey
+              </a>
+            </div>
+
+            <div class="hero-trust-badges">
+              <div class="trust-item">
+                <div class="trust-icon"><i class="fas fa-building"></i></div>
+                <div class="trust-text">Digicoders Pvt. Ltd.<span>Lucknow, Uttar Pradesh</span></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="trust-text">300+ Placements<span>All Tech Stacks (MERN, Python, Java)</span></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon"><i class="fas fa-users-gear"></i></div>
+                <div class="trust-text">40+ Interns Lead<span>Continuous Career Transformation</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Portrait -->
+          <div class="hero-visual">
+            <div class="hero-portrait-wrapper">
+              <div class="portrait-glow-backdrop"></div>
+
+              <!-- Main Portrait (Clean & Unobstructed) -->
+              <div class="portrait-card">
+                <div class="portrait-img-inner">
+                  <img src="assets/images/pushkal_sir.jpg" alt="Mr. Pushkal Singh - Respected Mentor & Leader">
+                  <div class="portrait-overlay"></div>
+                  <div class="portrait-meta">
+                    <h3 class="portrait-title">Pushkal Singh</h3>
+                    <p class="portrait-role">Management Leader & Mentorship Head</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Clean Structured Badges Below Photo -->
+              <div class="hero-portrait-badges">
+                <div class="portrait-sub-badge badge-gold">
+                  <div class="badge-icon-box"><i class="fas fa-star"></i></div>
+                  <div>
+                    <div class="badge-text-primary">Leadership & Placement Lead</div>
+                    <div class="badge-text-sub">300+ Placements Achieved</div>
+                  </div>
+                </div>
+
+                <div class="portrait-sub-badge badge-blue">
+                  <div class="badge-icon-box"><i class="fas fa-award"></i></div>
+                  <div>
+                    <div class="badge-text-primary">Interns' Inspiration</div>
+                    <div class="badge-text-sub">Confidence & Career Builder</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Section: "More Than A Manager" -->
+    <section id="about" class="section-py about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Image Card -->
+          <div class="about-card-frame">
+            <div class="glass-card about-image-card">
+              <div class="about-img-box">
+                <img src="assets/images/pushkal_about.jpg" alt="Pushkal Singh Mentorship at Digicoders">
+                <div class="about-quote-overlay">
+                  <p>"A leader is one who knows the way, goes the way, and shows the way."</p>
+                  <span>— Dedicated to Pushkal Sir</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Details -->
+          <div class="about-content">
+            <div>
+              <span class="section-tag blue-tag"><i class="fas fa-user-tie"></i> Dedicated Leadership</span>
+              <h2 class="section-title">More Than <span class="gold-gradient-text">A Manager</span></h2>
+            </div>
+
+            <p class="about-lead">
+              At <span>Digicoders Pvt. Ltd., Lucknow</span>, Pushkal Sir has enabled the successful career launch and placement of <span>300+ students across all technologies</span> (MERN Stack, Python, Java, PHP/Laravel, Flutter/React Native Apps).
+            </p>
+
+            <p class="about-p">
+              He takes personal interest in each student and intern's growth trajectory, turning theoretical knowledge into high-paying corporate tech careers with patience, discipline, and clear vision.
+            </p>
+
+            <div class="pillars-grid">
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fas fa-user-graduate"></i></div>
+                <div class="pillar-text">
+                  <h4>300+ Placements</h4>
+                  <p>Guiding students into top tech roles across all domain stacks.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fas fa-shield-halved"></i></div>
+                <div class="pillar-text">
+                  <h4>Building Confidence</h4>
+                  <p>Transforming hesitation into proactive problem-solving capability.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fas fa-door-open"></i></div>
+                <div class="pillar-text">
+                  <h4>Open Door Culture</h4>
+                  <p>Always accessible, patient, and empathetic to every intern's doubts.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="pillar-text">
+                  <h4>Growth Opportunities</h4>
+                  <p>Assigning real production challenges to prepare interns for high-growth careers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Leadership Impact Section (Live Counters) -->
+    <section id="impact" class="section-py impact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-chart-pie"></i> Measurable Excellence</span>
+          <h2 class="section-title">Impact That <span class="gold-gradient-text">Defines Careers</span></h2>
+          <p class="section-desc">Pushkal Sir's mentorship creates ripples of positive change across the tech ecosystem at Digicoders Pvt. Ltd., Lucknow.</p>
+        </div>
+
+        <div class="impact-grid">
+          <!-- Counter 1 (300+ Placements) -->
+          <div class="glass-card counter-card" style="border-color: rgba(245, 158, 11, 0.4);">
+            <div class="counter-icon-wrap" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(34, 197, 94, 0.3)); color: #f59e0b;"><i class="fas fa-trophy"></i></div>
+            <div class="counter-number"><span class="counter-val" data-target="300">0</span>+</div>
+            <div class="counter-label">Students Placed</div>
+            <p class="counter-desc">Across all technologies: MERN, Python, Java, App Dev & PHP.</p>
+          </div>
+
+          <!-- Counter 2 -->
+          <div class="glass-card counter-card">
+            <div class="counter-icon-wrap"><i class="fas fa-user-graduate"></i></div>
+            <div class="counter-number"><span class="counter-val" data-target="40">0</span>+</div>
+            <div class="counter-label">Interns Mentored</div>
+            <p class="counter-desc">Transformed ambitious students into confident software developers.</p>
+          </div>
+
+          <!-- Counter 3 -->
+          <div class="glass-card counter-card">
+            <div class="counter-icon-wrap"><i class="fas fa-briefcase"></i></div>
+            <div class="counter-number"><span class="counter-val" data-target="100">0</span>%</div>
+            <div class="counter-label">Dedication to Growth</div>
+            <p class="counter-desc">Continuous focus on skill development and career enhancement.</p>
+          </div>
+
+          <!-- Counter 4 -->
+          <div class="glass-card counter-card">
+            <div class="counter-icon-wrap"><i class="fas fa-chalkboard-user"></i></div>
+            <div class="counter-number"><span class="counter-val" data-target="150">0</span>+</div>
+            <div class="counter-label">Learning Sessions</div>
+            <p class="counter-desc">Practical problem-solving, code reviews, and industry insights.</p>
+          </div>
+
+          <!-- Counter 5 -->
+          <div class="glass-card counter-card">
+            <div class="counter-icon-wrap"><i class="fas fa-infinity"></i></div>
+            <div class="counter-number"><span>24</span>/7</div>
+            <div class="counter-label">Inspiration & Support</div>
+            <p class="counter-desc">Unconditional motivation that keeps every team member energized.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Intern To Employee Success Section (Timeline) -->
+    <section id="journey" class="section-py journey-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag blue-tag"><i class="fas fa-road"></i> Career Roadmap</span>
+          <h2 class="section-title">The Intern-To-Employee <span class="gold-gradient-text">Journey</span></h2>
+          <p class="section-desc">How Pushkal Sir carefully architects every phase of an intern's transformation into a skilled professional.</p>
+        </div>
+
+        <div class="timeline-wrap">
+          <div class="timeline-line">
+            <div class="timeline-line-progress"></div>
+          </div>
+
+          <!-- Timeline 1 -->
+          <div class="timeline-item">
+            <div class="timeline-node"><i class="fas fa-door-open"></i></div>
+            <div class="timeline-content">
+              <div class="glass-card timeline-card">
+                <span class="timeline-step">Phase 01 • Day One</span>
+                <h3 class="timeline-title">New Intern Joins Digicoders</h3>
+                <p class="timeline-desc">A fresh graduate enters with uncertainty and questions. Pushkal Sir greets them with warmth, sets clear goals, and creates a welcoming, fear-free learning atmosphere.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline 2 -->
+          <div class="timeline-item">
+            <div class="timeline-node"><i class="fas fa-book-open-reader"></i></div>
+            <div class="timeline-content">
+              <div class="glass-card timeline-card">
+                <span class="timeline-step">Phase 02 • Foundation</span>
+                <h3 class="timeline-title">Immersive Learning & Basics</h3>
+                <p class="timeline-desc">Structured daily tasks, foundational technical guidance, and collaborative exercises designed to turn raw theoretical knowledge into practical logic.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline 3 -->
+          <div class="timeline-item">
+            <div class="timeline-node"><i class="fas fa-code"></i></div>
+            <div class="timeline-content">
+              <div class="glass-card timeline-card">
+                <span class="timeline-step">Phase 03 • Application</span>
+                <h3 class="timeline-title">Real-World Project Contribution</h3>
+                <p class="timeline-desc">Interns get their hands dirty on live modules. Under Pushkal Sir's close code reviews, they learn debugging, clean architecture, and git collaboration.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline 4 -->
+          <div class="timeline-item">
+            <div class="timeline-node"><i class="fas fa-brain"></i></div>
+            <div class="timeline-content">
+              <div class="glass-card timeline-card">
+                <span class="timeline-step">Phase 04 • Confidence</span>
+                <h3 class="timeline-title">Problem Solving & Autonomy</h3>
+                <p class="timeline-desc">Interns begin independently diagnosing bugs, proposing features, and communicating with clients, gaining immense professional maturity.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline 5 -->
+          <div class="timeline-item">
+            <div class="timeline-node"><i class="fas fa-trophy"></i></div>
+            <div class="timeline-content">
+              <div class="glass-card timeline-card">
+                <span class="timeline-step">Phase 05 • Graduation</span>
+                <h3 class="timeline-title">Proud Digicoders Professional</h3>
+                <p class="timeline-desc">Interns successfully evolve into full-fledged software engineers and team leaders, ready to conquer any challenge in the global tech landscape.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-highlight-box">
+          <p>"Many interns found direction, confidence, and professional growth through his guidance."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Appreciation Wall (Interactive Swiper Slider) -->
+    <section id="appreciation" class="section-py appreciation-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-heart"></i> Heartfelt Voices</span>
+          <h2 class="section-title">The <span class="gold-gradient-text">Appreciation Wall</span></h2>
+          <p class="section-desc">Real messages and tributes from interns and colleagues who have experienced Pushkal Sir's transformative leadership.</p>
+        </div>
+
+        <div class="swiper-container-wrap">
+          <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper" id="testimonials-swiper-wrapper">
+              <!-- Dynamically populated by celebration.js -->
+            </div>
+            <!-- Pagination & Navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+        <div class="wish-cta-bar">
+          <button id="open-wish-modal-btn" class="btn btn-primary btn-glow">
+            <i class="fas fa-pen-fancy"></i> Leave Your Birthday Wish For Sir
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Achievement & Leadership Showcase -->
+    <section id="achievements" class="section-py achievements-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag blue-tag"><i class="fas fa-medal"></i> Pillars of Excellence</span>
+          <h2 class="section-title">Leadership <span class="gold-gradient-text">Showcase</span></h2>
+          <p class="section-desc">Key competencies and leadership traits that make Pushkal Singh a cornerstone of Digicoders Pvt. Ltd., Lucknow.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon"><i class="fas fa-people-roof"></i></div>
+            <h3 class="achievement-title">Intern Management Excellence</h3>
+            <p class="achievement-desc">Mastery in coordinating large batches of freshers, aligning their individual aspirations with company milestones with utmost empathy.</p>
+          </div>
+
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon"><i class="fas fa-compass"></i></div>
+            <h3 class="achievement-title">Career Direction & Mentorship</h3>
+            <p class="achievement-desc">Guiding interns through technology stacks, industry ethics, best practices, and career development paths.</p>
+          </div>
+
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon"><i class="fas fa-handshake-angle"></i></div>
+            <h3 class="achievement-title">Team Harmony & Coordination</h3>
+            <p class="achievement-desc">Bridging communication gaps, promoting collaborative sprint execution, and building high-trust synergy across all teams.</p>
+          </div>
+
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3 class="achievement-title">Talent Discovery Initiatives</h3>
+            <p class="achievement-desc">Identifying hidden sparks in every trainee and creating custom learning challenges to unlock their peak abilities.</p>
+          </div>
+
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon"><i class="fas fa-code-merge"></i></div>
+            <h3 class="achievement-title">Quality & Code Culture</h3>
+            <p class="achievement-desc">Instilling rigorous standards for clean code, thorough debugging, testing, and modern design principles.</p>
+          </div>
+
+          <div class="glass-card achievement-card">
+            <div class="achievement-icon"><i class="fas fa-face-smile-beam"></i></div>
+            <h3 class="achievement-title">Positive & Energetic Vibe</h3>
+            <p class="achievement-desc">Keeping the office vibrant, supportive, and cheerful even during intense sprint deliverables.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Memory Gallery -->
+    <section id="gallery" class="section-py gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-camera-retro"></i> Captured Moments</span>
+          <h2 class="section-title">Memory <span class="gold-gradient-text">Gallery</span></h2>
+          <p class="section-desc">Glimpses of mentorship, office camaraderie, celebrations, and milestone achievements at Digicoders Pvt. Ltd., Lucknow.</p>
+        </div>
+
+        <div class="gallery-filter-wrap">
+          <button class="gallery-filter-btn active" data-filter="all">All Memories</button>
+          <button class="gallery-filter-btn" data-filter="mentorship">Mentorship</button>
+          <button class="gallery-filter-btn" data-filter="celebrations">Celebrations</button>
+          <button class="gallery-filter-btn" data-filter="leadership">Leadership</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Gallery Item 1 (Large Featured) -->
+          <div class="glass-card gallery-item span-large" data-category="mentorship">
+            <span class="gallery-badge"><i class="fas fa-crown"></i> Chief Mentor</span>
+            <img src="assets/images/pushkal_sir.jpg" alt="Pushkal Singh Guiding Interns">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Mentorship Excellence</span>
+              <h4 class="gallery-item-title">Shaping 40+ Future Software Engineers</h4>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 (Tall) -->
+          <div class="glass-card gallery-item span-tall" data-category="leadership">
+            <span class="gallery-badge"><i class="fas fa-star"></i> Leadership</span>
+            <img src="assets/images/pushkal_about.jpg" alt="Pushkal Singh Leadership at Digicoders">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Management & Vision</span>
+              <h4 class="gallery-item-title">Leading With Empathy & Focus</h4>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="glass-card gallery-item" data-category="celebrations">
+            <span class="gallery-badge"><i class="fas fa-cake-candles"></i> Birthday</span>
+            <img src="assets/images/pushkal_celebration.jpg" alt="Birthday Celebrations at Digicoders">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Celebrations</span>
+              <h4 class="gallery-item-title">Birthday Smiles & Cheers</h4>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 (Wide) -->
+          <div class="glass-card gallery-item span-wide" data-category="mentorship">
+            <span class="gallery-badge"><i class="fas fa-code"></i> Sprint Review</span>
+            <img src="assets/images/gallery/memory_4.jpg" alt="Sprint Review and Guidance">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Technical Guidance</span>
+              <h4 class="gallery-item-title">Daily Sprint Code Reviews & Problem Solving</h4>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="glass-card gallery-item" data-category="leadership">
+            <span class="gallery-badge"><i class="fas fa-award"></i> Excellence</span>
+            <img src="assets/images/gallery/memory_5.jpg" alt="Tech Excellence Session">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Digicoders Team</span>
+              <h4 class="gallery-item-title">Building High Performance Tech Culture</h4>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 (Wide) -->
+          <div class="glass-card gallery-item span-wide" data-category="celebrations">
+            <span class="gallery-badge"><i class="fas fa-heart"></i> Moments</span>
+            <img src="assets/images/gallery/memory_6.jpg" alt="Team Digicoders Lucknow">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-category">Team Spirit</span>
+              <h4 class="gallery-item-title">Memorable Team Bonding & Gratitude</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Special Tribute Quote Section -->
+    <section class="section-py tribute-quote-section">
+      <div class="container">
+        <div class="tribute-quote-box">
+          <div class="quote-ornament"><i class="fas fa-quote-left"></i></div>
+          <blockquote class="tribute-quote-text">
+            "A great mentor doesn't just manage people. He inspires them to become better versions of themselves."
+          </blockquote>
+          <div class="tribute-author-seal">
+            <div class="seal-icon"><i class="fas fa-certificate"></i></div>
+            <div class="seal-info">
+              <h4 class="seal-title">Dedicated to Mr. Pushkal Singh</h4>
+              <p class="seal-sub">By 40+ Interns & Team Members • Digicoders Pvt. Ltd., Lucknow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Interactive Birthday Celebration Playground -->
+    <section id="celebration" class="section-py celebration-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-wand-magic-sparkles"></i> Interactive Fun</span>
+          <h2 class="section-title">Birthday Celebration <span class="gold-gradient-text">Zone</span></h2>
+          <p class="section-desc">Click each candle on the cake to ignite the flame, pop floating balloons, or unbox a special surprise wish!</p>
+        </div>
+
+        <div class="celebration-grid">
+          <!-- Interactive Cake Box -->
+          <div class="glass-card cake-interactive-box">
+            <div class="cake-instruction">
+              <i class="fas fa-fire-flame-curved"></i> Tap candles to light them up!
+            </div>
+
+            <!-- CSS 3D Multi-Tier Cake -->
+            <div class="cake-stage">
+              <div class="cake-candles">
+                <div class="candle" id="candle-1">
+                  <div class="candle-flame"></div>
+                </div>
+                <div class="candle" id="candle-2">
+                  <div class="candle-flame"></div>
+                </div>
+                <div class="candle" id="candle-3">
+                  <div class="candle-flame"></div>
+                </div>
+                <div class="candle" id="candle-4">
+                  <div class="candle-flame"></div>
+                </div>
+              </div>
+
+              <div class="cake-tier tier-top"></div>
+              <div class="cake-tier tier-middle"></div>
+              <div class="cake-tier tier-bottom"></div>
+              <div class="cake-plate"></div>
+            </div>
+
+            <div id="cake-status" class="cake-status-text">
+              Candles Lit: <span style="color: #f59e0b;">0 / 4</span> (Tap candles or click button below!)
+            </div>
+
+            <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+              <button id="light-all-candles-btn" class="btn btn-primary">
+                <i class="fas fa-bolt"></i> Light All Candles
+              </button>
+            </div>
+          </div>
+
+          <!-- Fun Celebration Activity Cards -->
+          <div class="celebration-activities">
+            <div class="glass-card activity-card">
+              <div class="activity-info">
+                <div class="activity-icon-wrap"><i class="fas fa-gift"></i></div>
+                <div class="activity-text">
+                  <h4>Mystery Birthday Gift Box</h4>
+                  <p>Unwrap a personalized tribute card and surprise message.</p>
+                </div>
+              </div>
+              <button id="open-gift-btn" class="btn btn-glass" style="padding: 10px 18px; font-size: 0.85rem;">
+                <i class="fas fa-box-open"></i> Unbox
+              </button>
+            </div>
+
+            <div class="glass-card activity-card">
+              <div class="activity-info">
+                <div class="activity-icon-wrap"><i class="fas fa-burst"></i></div>
+                <div class="activity-text">
+                  <h4>Floating Balloons Spawner</h4>
+                  <p>Release vibrant celebration balloons across the screen and pop them!</p>
+                </div>
+              </div>
+              <button id="launch-balloons-btn" class="btn btn-glass" style="padding: 10px 18px; font-size: 0.85rem;">
+                <i class="fas fa-paper-plane"></i> Launch
+              </button>
+            </div>
+
+            <div class="glass-card activity-card">
+              <div class="activity-info">
+                <div class="activity-icon-wrap"><i class="fas fa-champagne-glasses"></i></div>
+                <div class="activity-text">
+                  <h4>Ambient Celebration Melodies</h4>
+                  <p>Play synthesizer chords and celebratory audio tones.</p>
+                </div>
+              </div>
+              <a href="#grand-finale" class="btn btn-glass" style="padding: 10px 18px; font-size: 0.85rem;">
+                <i class="fas fa-fireworks"></i> Fireworks
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Grand Finale & Thank You Section with Live Fireworks -->
+    <section id="grand-finale" class="grand-finale-section">
+      <canvas id="fireworks-canvas"></canvas>
+
+      <div class="container">
+        <div class="glass-card finale-content-card">
+          <div class="finale-badge">
+            <i class="fas fa-sparkles"></i> Grand Birthday Dedication
+          </div>
+
+          <h2 class="finale-title">
+            Happy Birthday<br>
+            <span class="gold-gradient-text">Pushkal Singh</span> 🎉
+          </h2>
+
+          <p class="finale-message">
+            Thank you for guiding, supporting, and inspiring every intern who had the opportunity to learn under your leadership at <strong>Digicoders Pvt. Ltd., Lucknow</strong>.<br><br>
+            Your dedication continues to create future professionals, visionary thinkers, and capable leaders!
+          </p>
+
+          <div class="finale-actions">
+            <button class="btn btn-wish-quick btn-glow open-thankyou-btn">
+              <i class="fas fa-heart"></i> Wish Karne Ke Liye Click Kare ✨
+            </button>
+            <a href="https://api.whatsapp.com/send?phone=919918863106&text=Happy%20Birthday%20Respected%20Pushkal%20Sir%21%20%F0%9F%8E%82%20Wishing%20you%20immense%20health%2C%20happiness%2C%20and%20great%20success.%20Thank%20you%20for%20being%20an%20incredible%20mentor%20at%20Digicoders%20Pvt.%20Ltd.%2C%20Lucknow%21" target="_blank" class="btn btn-whatsapp-direct">
+              <i class="fab fa-whatsapp"></i> Wish on WhatsApp (+91 99188 63106)
+            </a>
+            <a href="#hero" class="btn btn-glass">
+              <i class="fas fa-arrow-up"></i> Back to Top
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">Pushkal Singh • Birthday Tribute</div>
+        <p class="footer-text">
+          Crafted with <span><i class="fas fa-heart"></i></span> by 40+ Interns & Tech Team @ <strong>Digicoders Pvt. Ltd., Lucknow</strong>
+        </p>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Sir</a></li>
+          <li><a href="#impact">Leadership Impact</a></li>
+          <li><a href="#journey">Intern Journey</a></li>
+          <li><a href="#celebration">Cake Cutting</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Thank You Birthday Gratitude Modal -->
+  <div id="thankyou-modal" class="modal-overlay">
+    <div class="modal-card thankyou-card">
+      <button class="modal-close-btn" id="close-thankyou-modal" aria-label="Close Modal">&times;</button>
+      <div class="thankyou-icon">
+        <i class="fas fa-hands-praying"></i>
+      </div>
+      <span class="section-tag"><i class="fas fa-heart"></i> Heartfelt Gratitude</span>
+      <h3 class="thankyou-title">
+        Dil Se Dhanyawaad! 🎉
+      </h3>
+      <p class="thankyou-desc">
+        Aapki shubhkamnaayein aur samman <strong>Mr. Pushkal Singh</strong> tak pahunch gaya hai!<br><br>
+        <em>"Unki mentorship aur leadership ne hum sabhi 40+ interns aur trainees ka career sanwara hai. Digicoders Pvt. Ltd., Lucknow parivaar ki taraf se aapko bohot bohot shukriya!"</em>
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+        <a href="https://api.whatsapp.com/send?phone=919918863106&text=Happy%20Birthday%20Respected%20Pushkal%20Sir%21%20%F0%9F%8E%82%20Wishing%20you%20immense%20health%2C%20happiness%2C%20and%20great%20success.%20Thank%20you%20for%20being%20an%20incredible%20mentor%20at%20Digicoders%20Pvt.%20Ltd.%2C%20Lucknow%21" target="_blank" class="btn btn-whatsapp-direct" style="width: 100%; max-width: 380px;">
+          <i class="fab fa-whatsapp"></i> Send Direct Wish on WhatsApp (+91 99188 63106)
+        </a>
+        <button id="close-thankyou-btn" class="btn btn-glass" style="width: 100%; max-width: 380px;">
+          <i class="fas fa-check"></i> Close & Enjoy Celebration
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+      <img src="" alt="Pushkal Singh Tribute Memory" id="lightbox-img">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Wish Submission Modal Form -->
+  <div id="wish-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-wish-modal" aria-label="Close Modal">&times;</button>
+      <span class="section-tag"><i class="fas fa-pen-nib"></i> Intern Tribute</span>
+      <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 20px;">
+        Write A Wish For <span class="gold-gradient-text">Pushkal Sir</span>
+      </h3>
+
+      <form id="wish-form">
+        <div class="form-group">
+          <label class="form-label" for="wish-name">Your Full Name</label>
+          <input type="text" id="wish-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="wish-role">Your Role / Batch</label>
+          <input type="text" id="wish-role" class="form-input" placeholder="e.g. Intern Batch 2025 / Web Dev Intern">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="wish-message">Your Heartfelt Birthday Message</label>
+          <textarea id="wish-message" class="form-textarea" placeholder="Write your gratitude, birthday wishes, and mentorship memory..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-glow" style="width: 100%;">
+          <i class="fas fa-paper-plane"></i> Post Birthday Wish
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mystery Birthday Gift Modal -->
+  <div id="gift-modal" class="modal-overlay">
+    <div class="modal-card" style="text-align: center;">
+      <button class="modal-close-btn" id="close-gift-modal" aria-label="Close Modal">&times;</button>
+      <div class="gift-box-visual">🎁</div>
+      <span class="section-tag"><i class="fas fa-award"></i> The Best Mentor Award</span>
+      <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin: 16px 0 10px;">
+        To Pushkal Sir, with Utmost Respect!
+      </h3>
+      <p style="font-size: 0.95rem; color: var(--text-body); line-height: 1.7; margin-bottom: 24px;">
+        "For believing in us when we were beginners, for standing by us when code broke, and for giving us the confidence to build our dreams at Digicoders Pvt. Ltd., Lucknow."
+      </p>
+      <div style="display: inline-block; padding: 10px 24px; background: rgba(245, 158, 11, 0.15); border: 1px solid var(--gold-primary); border-radius: 9999px; color: var(--gold-light); font-weight: 700;">
+        ⭐ World's Best Mentor ⭐
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Quick Theme Switcher Button Dock -->
+  <div class="floating-theme-dock">
+    <button id="floating-theme-btn" class="floating-theme-btn" title="Quick Theme Switcher" aria-label="Switch Theme">
+      <i class="fas fa-palette"></i>
+      <span>Theme / रंग</span>
+    </button>
+  </div>
+
+  <!-- CDN Scripts -->
+  <!-- Three.js for 3D Particle Constellation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- Swiper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/celebration.js"></script>
+  <script src="assets/js/fireworks.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
